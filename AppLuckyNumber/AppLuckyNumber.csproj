@@ -95,12 +95,13 @@
 		TintiColor -> Para da cor para a imagem
 		ForegroundScale -> Porcentagem da imagem do icone
 		BackgroundColor -> Da cor ao fundo da imagem
+		BaseSize -> Tamanho base
 		-->
 		<MauiIcon Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'" ForegroundScale="0.4" Include="Resources\AppIcon\appicon_android_fg.svg" ForegroundFile="Resources\AppIcon\appicon_android_fg.svg" TintColor="#FFFFFF"/>
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" TintColor="#FFFFFF" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#00AB37" BaseSize="155,204" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
