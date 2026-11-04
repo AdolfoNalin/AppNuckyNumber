@@ -2,25 +2,108 @@
 <ContentPage
     x:Class="AppLuckyNumber.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    BackgroundColor="White">
-    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-        <Image Source="trevo.png" />
+    <ScrollView>
 
-        <Label
-            Margin="70"
-            HorizontalOptions="Center"
-            Text="Número da Sorte"
-            VerticalOptions="Center" />
+        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
 
-        <Button
-            BackgroundColor="#00AB37"
-            CornerRadius="20"
-            FontAttributes="Bold"
-            HorizontalOptions="Center"
-            Text="Gerar Números da sorte"
-            TextColor="White" />
+            <Image Source="trevo.png" WidthRequest="115" />
 
-    </VerticalStackLayout>
+            <Label
+                x:Name="lblLuckyNumberTitle"
+                Margin="70"
+                HorizontalOptions="Center"
+                Text="Número da Sorte"
+                TextColor="#00AB37"
+                VerticalOptions="Center" />
+
+            <VerticalStackLayout x:Name="ContainerLuckyNumber" IsVisible="False">
+
+                <Label
+                    Margin="0,20,0,0"
+                    HorizontalOptions="Center"
+                    Text="O número da sorte é:"
+                    TextColor="#00AB37" />
+
+                <HorizontalStackLayout
+                    Margin="0,50"
+                    HorizontalOptions="Center"
+                    Spacing="3">
+
+                    <Border
+                        Padding="10,5"
+                        Stroke="#00AB37"
+                        StrokeShape="RoundRectangle 8">
+                        <Label
+                            x:Name="LuckyNumber01"
+                            FontSize="24"
+                            TextColor="#00AB37" />
+                    </Border>
+                    <Border
+                        Padding="10,5"
+                        Stroke="#00AB37"
+                        StrokeShape="RoundRectangle 8">
+                        <Label
+                            x:Name="LuckyNumber02"
+                            FontSize="24"
+                            TextColor="#00AB37" />
+                    </Border>
+                    <Border
+                        Padding="10,5"
+                        Stroke="#00AB37"
+                        StrokeShape="RoundRectangle 8">
+                        <Label
+                            x:Name="LuckyNumber03"
+                            FontSize="24"
+                            TextColor="#00AB37" />
+                    </Border>
+                    <Border
+                        Padding="10,5"
+                        Stroke="#00AB37"
+                        StrokeShape="RoundRectangle 8">
+                        <Label
+                            x:Name="LuckyNumber04"
+                            FontSize="24"
+                            TextColor="#00AB37" />
+                    </Border>
+                    <Border
+                        Padding="10,5"
+                        Stroke="#00AB37"
+                        StrokeShape="RoundRectangle 8">
+                        <Label
+                            x:Name="LuckyNumber05"
+                            FontSize="24"
+                            TextColor="#00AB37" />
+                    </Border>
+                    <Border
+                        Padding="10,5"
+                        Stroke="#00AB37"
+                        StrokeShape="RoundRectangle 8">
+                        <Label
+                            x:Name="LuckyNumber06"
+                            FontSize="24"
+                            TextColor="#00AB37" />
+                    </Border>
+
+                </HorizontalStackLayout>
+
+                <Label
+                    Margin="0,0,0,50"
+                    HorizontalOptions="Center"
+                    Text="Boa Sorte!"
+                    TextColor="#00AB37" />
+            </VerticalStackLayout>
+
+            <Button
+                BackgroundColor="#00AB37"
+                Clicked="OnGenerationLuckyNumber"
+                CornerRadius="20"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Text="Gerar Números da sorte"
+                TextColor="White" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
